@@ -45,5 +45,11 @@
   </ol>
 </section></main><footer>
     <p>KeetaNet — launch kit. © 2026</p>
-  </footer><script src="assets/js/script.js"></script></body>
+  </footer><script src="assets/js/script.js"></script> async function checkKeetaNet() {
+  const res = await fetch("https://amounts-beginning-auctions-basketball.trycloudflare.com/ping");
+  const data = await res.json();
+  document.getElementById("status").innerText = data.status;
+}
+
+checkKeetaNet();</body>
 </html>
